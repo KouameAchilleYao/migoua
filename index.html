@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usb 8 en 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="countdown.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="container">
+            <div class="logo">
+                <img src="logo.png" \>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Avantages</a>
+                <a href="#purchase">Acheter</a>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="badge">Nouveau</span>
+                    <h1>USB 8 en 1 - Version PRO</h1>
+                    <p>Vous travaillez vite. Votre matériel doit suivre. Ce hub 8-en-1 est l'allié ultime des pros exigeants : ultra-rapide, compact, robuste. Ne laissez plus un port manquant ou un transfert lent freiner votre productivité. Gagnez du temps, gagnez en fluidité… agissez maintenant.</p>
+                    <div>
+                        <a href="#features" class="btn">Caractéristiques</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="hero.jpeg" style="margin-top: 2rem;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Puissance, vitesse et mobilité : tout ce qu'il vous faut !</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Un seul port, huit possibilités</h3>
+                        <p>Connectez tous vos appareils - USB 3.0, SD, microSD, USB-C... Simplifiez votre espace de travail en un clic.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Transferts à la vitesse de l-éclair</h3>
+                        <p>Gagnez un temps précieux : copiez des fichiers lourds jusqu'à 10x plus vite qu'avec un USB classique (jusqu'à 5 Gbps).</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Image 4K ultra nette</h3>
+                        <p>Projetez vos contenus en qualité cinéma grâce à la sortie HDMI 4K. Idéal pour présentations, films ou multitâche avancé.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Recharge express PD 100W</h3>
+                        <p>Restez alimenté toute la journée : recharge ultra-rapide de vos appareils pendant l'utilisation, sans interruption.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Design premium, fait pour durer</h3>
+                        <p>Boîtier en alliage d-aluminium, finition soignée et résistance aux chocs : un accessoire qui inspire confiance.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content">
+                        <h3>Ultra-portable, prêt à vous suivre</h3>
+                        <p>Glissez-le dans votre sac ou votre poche. Emmenez la performance avec vous, où que vous alliez.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero hero2">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="5.jpeg">
+                </div>
+                <div class="hero-text">
+                    <p>
+                        Oubliez les ports manquants, les transferts interminables et le chaos des câbles. Le Hub USB 8-en-1 PRO vous offre une maîtrise totale, immédiate et élégante de votre univers numérique.<br><br>
+                        Connectez tout, instantanément. Transférez vos fichiers lourds en un éclair. Alimentez vos appareils pendant que vous créez, présentez ou travaillez sans interruption.<br><br>
+                        Pensé pour les professionnels exigeants, conçu pour ceux qui avancent vite — et loin.
+                    </p>
+                    <div style="display: flex;" class="buttons">
+                        <a href="#" class="btn" id="orderTowhatsapp">Commander</a>
+                        <a href="#" class="btn_price" id="">13.000F CFA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="purchase" class="purchase">
+        <div class="container">
+            <div class="purchase-content">
+                <div class="purchase-card">
+                    <div class="quantity-selector">
+                        <button class="quantity-btn" id="decreaseQuantity">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="10">
+                        <button class="quantity-btn" id="increaseQuantity">+</button>
+                    </div>
+                    <div class="purchase-info">
+                        <p>✓ Livraison gratuite</p>
+                        <p>✓ Paiement à la Livraison</p>
+                    </div>
+                    <a href="#" class="btn" id="addToCart">Ajouter au panier</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-modal" id="cartModal">
+        <h3>Panier d'achat</h3>
+        <div id="cartItems"></div>
+        <a href="#" class="btn" id="checkout">Commander</a>
+    </div>
+
+    <!-- Modal de commande -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Finalisez votre commande</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Nom complet <span style="color: red;">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span style="color: red;">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Adresse de livraison <span style="color: red;"">*</span></label>
+                    <input type="text" id="address" name="address" rows="3" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantité</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1">
+                </div>
+                <div class="form-group" id="totalPriceGroup">
+                    <strong>Total : <span id="orderTotal">13 000</span> FCFA</strong>
+                </div>
+                <button type="submit" class="btn">Valider la commande</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="order.js"></script>
+    <footer class="footer" style="text-align: center;">
+        <hr>
+        <p>&copy; Migoua. Tous droits réservés.</p>
+   </footer>
+ 
+
+    <script src="index.js"></script>
+</body>
+</html>
