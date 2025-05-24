@@ -20,17 +20,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Fonctionnalités du panier
 let cartCount = 0;
+// Variables globales
 const cartCountElement = document.getElementById('cartCount');
 const cartModal = document.getElementById('cartModal');
 const cartItems = document.getElementById('cartItems');
-const addToCartBtn = document.getElementById('addToCart');
+const checkout = document.getElementById('checkout');
 const orderTowhatsapp = document.getElementById("orderTowhatsapp");
 const quantityInput = document.getElementById('quantity');
 const decreaseQuantityBtn = document.getElementById('decreaseQuantity');
 const increaseQuantityBtn = document.getElementById('increaseQuantity');
 const cartIcon = document.getElementById('cartIcon');
-
-const checkout = document.getElementById("checkout");
+const addToCartBtn = document.getElementById('addToCart');
 
 function updateCartCount() {
     cartCountElement.textContent = cartCount;
@@ -42,7 +42,7 @@ function updateCartModal() {
             <img src="usb.png">
             <div class="cart-item-info">
                 <h4>Usb 8 en 1 pro</h4>
-                <p>Quantité: ${cartCount}</p>
+                
                 <p>Prix: ${cartCount * 13000}F CFA</p>
             </div>
         </div>

@@ -23,7 +23,12 @@
             <div class="logo">
                 <img src="logo.png" \>
             </div>
-            <div class="nav-links">
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links" id="navLinks">
                 <a href="#features">Avantages</a>
                 <a href="#purchase">Acheter</a>
                 <div class="cart-icon" id="cartIcon">
@@ -38,7 +43,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <span class="badge">Nouveau</span>
+                    <span class="badge">Promo</span>
                     <h1>USB 8 en 1 - Version PRO</h1>
                     <p>Vous travaillez vite. Votre matériel doit suivre. Ce hub 8-en-1 est l'allié ultime des pros exigeants : ultra-rapide, compact, robuste. Ne laissez plus un port manquant ou un transfert lent freiner votre productivité. Gagnez du temps, gagnez en fluidité… agissez maintenant.</p>
                     <div>
@@ -175,9 +180,48 @@
         </div>
     </div>
 
+    <!-- Overlay pour le menu mobile -->
+    <div class="overlay" id="overlay"></div>
+    
+    <script>
+        // Initialisation du menu mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            const overlay = document.getElementById('overlay');
+            const body = document.body;
+            
+            function toggleMenu() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                overlay.classList.toggle('active');
+                
+                // Empêcher le défilement de la page quand le menu est ouvert
+                if (navLinks.classList.contains('active')) {
+                    body.style.overflow = 'hidden';
+                } else {
+                    body.style.overflow = 'auto';
+                }
+            }
+            
+            // Ouvrir/fermer le menu au clic sur le bouton hamburger
+            hamburger.addEventListener('click', toggleMenu);
+            
+            // Fermer le menu quand on clique sur l'overlay
+            overlay.addEventListener('click', toggleMenu);
+            
+            // Fermer le menu quand on clique sur un lien
+            document.querySelectorAll('.nav-links a, .cart-icon').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (navLinks.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+        });
+    </script>
     <script src="order.js"></script>
     <footer class="footer" style="text-align: center;">
-        <hr>
         <p>&copy; Migoua. Tous droits réservés.</p>
    </footer>
  
