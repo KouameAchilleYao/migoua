@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mettre à jour le prix total dynamiquement
     const orderTotal = document.getElementById('orderTotal');
-    const PRIX_UNITAIRE = 13000;
+    const PRIX_UNITAIRE = 11000;
     function updateTotal() {
         const quantity = parseInt(quantityInput.value) || 1;
         orderTotal.textContent = (quantity * PRIX_UNITAIRE).toLocaleString();

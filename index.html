@@ -137,12 +137,18 @@
                     </p>
                     <div style="display: flex;" class="buttons">
                         <a href="#" class="btn" id="orderTowhatsapp" onclick="fbq('track', 'InitiateCheckout');">Commander</a>
-                        <a href="#" class="btn_price" id="">13.000F CFA</a>
+                        <a href="#" class="btn_price" id="">11 000F CFA</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div id="countdown">
+        <h2 class="countdown-title">Fin de la promo dans :</h2>
+        <p class="countdown-description">Passer le delais de la promo, le prix reviendra à 15.000F CFA</p>
+        <div class="countdown-blocks"></div>
+    </div>
 
 
 
@@ -191,12 +197,17 @@
                 </div>
                 <div class="form-group">
                     <label for="quantity">Quantité</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1">
+                    <div class="quantity-selector">
+                        <button type="button" class="quantity-btn" id="decreaseQuantity">-</button>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" style="width: 50px; text-align: center;">
+                        <button type="button" class="quantity-btn" id="increaseQuantity">+</button>
+                    </div>
                 </div>
+
                 <div class="form-group" id="totalPriceGroup">
-                    <strong>Total : <span id="orderTotal">13 000</span> FCFA</strong>
+                    <strong>Total : <span id="orderTotal">11 000</span> FCFA</strong>
                 </div>
-                <button type="submit" class="btn" onclick="fbq('track', 'Purchase', {value: 13000, currency: 'XOF'});">Valider la commande</button>
+                <button type="submit" class="btn" onclick="fbq('track', 'Purchase', {value: 11000, currency: 'XOF'});">Valider la commande</button>
             </form>
         </div>
     </div>
