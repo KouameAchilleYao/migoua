@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1378526596628638');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" 
+            src="https://www.facebook.com/tr?id=1378526596628638&ev=PageView&noscript=1"
+        />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Migoua</title>
+    <title>Usb 8 en 1</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="countdown.css">
@@ -115,7 +136,7 @@
                         Pensé pour les professionnels exigeants, conçu pour ceux qui avancent vite — et loin.
                     </p>
                     <div style="display: flex;" class="buttons">
-                        <a href="#" class="btn" id="orderTowhatsapp">Commander</a>
+                        <a href="#" class="btn" id="orderTowhatsapp" onclick="fbq('track', 'InitiateCheckout');">Commander</a>
                         <a href="#" class="btn_price" id="">13.000F CFA</a>
                     </div>
                 </div>
@@ -138,7 +159,7 @@
                         <p>✓ Livraison gratuite</p>
                         <p>✓ Paiement à la Livraison</p>
                     </div>
-                    <a href="#" class="btn" id="addToCart">Ajouter au panier</a>
+                    <a href="#" class="btn" id="addToCart" onclick="fbq('track', 'AddToCart');">Ajouter au panier</a>
                 </div>
             </div>
         </div>
@@ -175,7 +196,7 @@
                 <div class="form-group" id="totalPriceGroup">
                     <strong>Total : <span id="orderTotal">13 000</span> FCFA</strong>
                 </div>
-                <button type="submit" class="btn">Valider la commande</button>
+                <button type="submit" class="btn" onclick="fbq('track', 'Purchase', {value: 13000, currency: 'XOF'});">Valider la commande</button>
             </form>
         </div>
     </div>
