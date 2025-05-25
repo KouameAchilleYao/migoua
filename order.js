@@ -95,12 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!address) throw new Error('L\'adresse est requise');
 
             // Message pour WhatsApp
-            const message = `Nouvelle commande !%0A%0A` +
+            const message = `NOUVELLE COMMANDE !%0A%0A%0A%0A` +
                            `*Nom*: ${name}%0A` +
                            `*Email*: ${email}%0A` +
                            `*Adresse*: ${address}%0A` +
                            `*Quantité*: ${quantity}%0A` +
-                           `*Prix total*: ${totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} FCFA`;
+                           `*Prix total*: ${totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} FCFA%0A%0A`
+                           `MERCI DE CHOISIR MIGOUA`;
 
             // Réinitialiser le formulaire
             orderForm.reset();
