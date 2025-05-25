@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="1.jpeg" style="margin-top: 2rem;">
+                    <img src="hero.jpeg" style="margin-top: 2rem;">
                 </div>
             </div>
         </div>
@@ -180,48 +180,34 @@
         </div>
     </div>
 
-    <!-- Overlay pour le menu mobile -->
-    <div class="overlay" id="overlay"></div>
-    
     <script>
         // Initialisation du menu mobile
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.getElementById('hamburger');
             const navLinks = document.getElementById('navLinks');
-            const overlay = document.getElementById('overlay');
-            const body = document.body;
             
-            function toggleMenu() {
-                hamburger.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                overlay.classList.toggle('active');
-                
-                // Empêcher le défilement de la page quand le menu est ouvert
-                if (navLinks.classList.contains('active')) {
-                    body.style.overflow = 'hidden';
-                } else {
-                    body.style.overflow = 'auto';
-                }
-            }
-            
-            // Ouvrir/fermer le menu au clic sur le bouton hamburger
-            hamburger.addEventListener('click', toggleMenu);
-            
-            // Fermer le menu quand on clique sur l'overlay
-            overlay.addEventListener('click', toggleMenu);
-            
-            // Fermer le menu quand on clique sur un lien
-            document.querySelectorAll('.nav-links a, .cart-icon').forEach(link => {
-                link.addEventListener('click', function() {
-                    if (navLinks.classList.contains('active')) {
-                        toggleMenu();
-                    }
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navLinks.classList.toggle('active');
                 });
-            });
+                
+                // Fermer le menu quand on clique sur un lien
+                document.querySelectorAll('.nav-links a, .cart-icon').forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
         });
     </script>
     <script src="order.js"></script>
     <footer class="footer" style="text-align: center;">
+        <ul style="margin-bottom: 1rem;">
+            <a href="https://web.facebook.com/migouashop"><i class="fa-brands fa-facebook"></i></a>
+            <a href="tel:+2250703946623"><i class="fa-solid fa-phone"></i></a>
+        </ul>
         <p>&copy; Migoua. Tous droits réservés.</p>
    </footer>
  
