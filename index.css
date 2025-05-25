@@ -16,7 +16,7 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
-    min-width: 430px;
+    min-width: 320px;
 }
 
 /* Styles pour le modal de commande */
