@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const formData = new FormData(orderForm);
         const quantity = parseInt(formData.get('quantity')) || 1;
-        const totalPrice = quantity * 13000;
+        const totalPrice = quantity * 12000;
 
         // Désactiver le bouton de soumission
         const submitButton = orderForm.querySelector('button[type="submit"]');
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'auto';
 
             // Redirection vers WhatsApp
-            window.open(`https://wa.me/2250703946623?text=${message}`, '_blank');
+            window.open(`https://wa.me/2250545912239?text=${message}`, '_blank');
             
         } catch (error) {
             console.error('Erreur:', error);
