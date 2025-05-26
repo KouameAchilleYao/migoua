@@ -43,7 +43,7 @@ function updateCartModal() {
             <div class="cart-item-info">
                 <h4>Usb 8 en 1 pro</h4>
                 
-                <p>Prix: ${cartCount * 11000}F CFA</p>
+                <p>Prix: ${(cartCount * 12000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')} FCFA</p>
             </div>
         </div>
     `;
@@ -95,7 +95,7 @@ increaseQuantityBtn.addEventListener('click', () => {
 // Compte à rebours - 3 jours à partir de maintenant
 const now = new Date();
 const launchDate = new Date(now);
-launchDate.setDate(now.getDate() + 4);
+launchDate.setDate(now.getDate() + 5);
 launchDate.setHours(0, 0, 0, 0);
 const countdownElement = document.querySelector(".countdown-blocks");
 

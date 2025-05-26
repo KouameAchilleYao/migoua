@@ -95,12 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!address) throw new Error('L\'adresse est requise');
 
             // Message pour WhatsApp
-            const message = `NOUVELLE COMMANDE !%0A%0A%0A%0A` +
+            const totalPrice = quantity * 12000; // Ajout de la définition de totalPrice
+            const message = `NOUVELLE COMMANDE !%0A%0A` +
                            `*Nom*: ${name}%0A` +
                            `*Email*: ${email}%0A` +
                            `*Adresse*: ${address}%0A` +
                            `*Quantité*: ${quantity}%0A` +
-                           `*Prix total*: ${totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} FCFA%0A%0A`
+                           `*Prix total*: ${totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')} FCFA%0A%0A` +
                            `MERCI DE CHOISIR MIGOUA`;
 
             // Réinitialiser le formulaire
@@ -127,10 +128,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mettre à jour le prix total dynamiquement
     const orderTotal = document.getElementById('orderTotal');
-    const PRIX_UNITAIRE = 11000;
+    const PRIX_UNITAIRE = 12000;
     function updateTotal() {
         const quantity = parseInt(quantityInput.value) || 1;
-        orderTotal.textContent = (quantity * PRIX_UNITAIRE).toLocaleString();
+        orderTotal.textContent = (quantity * PRIX_UNITAIRE).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     }
     if (quantityInput) {
         quantityInput.addEventListener('input', function() {

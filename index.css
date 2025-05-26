@@ -313,9 +313,6 @@ h1 {
 }
 .quantity-selector {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
     margin-bottom: 30px;
 }
 .quantity-btn {
@@ -892,10 +889,12 @@ section.coming-soon form button {
 /* COUNTDOWN*/
 
 #countdown {
-	max-width: 600px;
+	width: 100%;
 	margin: 0 auto 40px;
 	text-align: center;
-	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .countdown-title {
@@ -913,9 +912,14 @@ section.coming-soon form button {
 
 .countdown-blocks {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 16px;
+	grid-template-columns: repeat(3, 100px);
+	gap: 10px;
 	justify-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+
 }
 
 .time-block {
