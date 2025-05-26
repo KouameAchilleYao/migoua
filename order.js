@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                            `*Adresse*: ${address}%0A` +
                            `*Quantité*: ${quantity}%0A` +
                            `*Prix total*: ${totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')} FCFA%0A%0A` +
+                            `Votre commande est en cours de traitement%0A%0A` +
                            `MERCI DE CHOISIR MIGOUA`;
 
             // Réinitialiser le formulaire
