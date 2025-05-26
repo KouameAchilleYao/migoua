@@ -95,7 +95,7 @@ increaseQuantityBtn.addEventListener('click', () => {
 // Compte à rebours - 3 jours à partir de maintenant
 const now = new Date();
 const launchDate = new Date(now);
-launchDate.setDate(now.getDate() + 5);
+launchDate.setDate(now.getDate() + 3);
 launchDate.setHours(0, 0, 0, 0);
 const countdownElement = document.querySelector(".countdown-blocks");
 
